@@ -52,13 +52,15 @@ Also, the price value can be specified as a percentage of some reference attribu
 *(The reference attribute for markup pricing can be configured from the extension settings)*
 
 Supported example of values for relative price updates are described below:  
-| Value | Description                                                                                                                                                                                                          |
-|-------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| +10   | Increase the current value by 10                                                                                                                                                                                     |
-| -10   | Decrease the current value by 10                                                                                                                                                                                     |
-| 10%   | 10% of the reference price value(note that there is no sign in the prefix)  Reference based pricing applies only for price types: msrp, special_price.  But for tier_price & group_price, it represents the discount |
-| +10%  | Increase the current value by 10%                                                                                                                                                                                    |
-| -10%  | Decrease the current value by 10%                                                                                                                                                                                    |
+
+|Value|Description|
+|--- |--- |
+|+10|Increase the current value by 10|
+|-10|Decrease the current value by 10|
+|10%|10% of the reference price value *(note that there is no sign in the prefix)*  Reference based pricing applies only for price types: *msrp*, *special_price*. But for *tier_price* & *group_price*, X% represents the discount|
+|+10%|Increase the current value by 10%|
+|-10%|Decrease the current value by 10%|
+
 
 ### Price Rounding Options
 Price values will likely have complex decimal values.  
