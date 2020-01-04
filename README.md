@@ -95,6 +95,9 @@ php bin/magento cache:flush
 ```
 1. Go to Admin > SYSTEM > Mass Importer Pro > Here you can import, export & configure settings
 
+## Sample Files
+For the sample files, please visit [Magento 2 Regular, Special & Tier Price Importer Sample Files](https://github.com/MagePsycho/magento2-regular-special-tier-price-importer-sample-files)
+
 ## Live Demo:
 *Coming Soon*
 
