@@ -16,6 +16,7 @@ And with the export pricing option, store admin can easily prepare the import fi
 * Support for different types of price rounding (whole number to the psychological pricing)
 * Price values can be increased(+), decreased(-) by a fixed amount value or percentage
 * Price values can also be set as a certain percentage of some reference attribute value
+* Ability to import prices via command line interface (CLI)
 * Option to export the different prices which makes import file preparation much easier
 
 ## Feature Highlights
