@@ -46,20 +46,25 @@ This option is super helpful in checking the CSV data structure(For Ex: if rows 
 
 ![CSV Uploader with File Preview](https://www.magepsycho.com/media/catalog/product/6/-/6-2-magento2-mip-price-importer-csv-file-previewer.png)
 
-### Relative Price Updates
+### Flexible Price Formats
 With this extension, any price can be updated by increasing(+) or decreasing(-) by fixed amount or percentage.  
 Also, the price value can be specified as a percentage of some reference attribute value.  
+
 *(The reference attribute for markup pricing can be configured from the extension settings)*
 
-Supported example of values for relative price updates are described below:  
+And marking the price value with x will delete the price data from the system. With this adding, updating & deleting the different prices can achieved with the same file.
 
-|Value|Description|
-|--- |--- |
-|+10|Increase the current value by 10|
-|-10|Decrease the current value by 10|
-|10%|10% of the reference price value *(note that there is no sign in the prefix)*  Reference based pricing applies only for price types: *msrp*, *special_price*. But for *tier_price* & *group_price*, X% represents the discount|
-|+10%|Increase the current value by 10%|
-|-10%|Decrease the current value by 10%|
+Supported example of different pricing format for importing are described below:
+
+| Format | Description | Applied To |
+| ------- | -------------- | ------------ |
+| 10   | 	Fixed amount value  | All Prices |
+| +10   | Increase the current value by 10  | All Prices |
+| -10   | Decrease the current value by 10  | All Prices |
+| 10%   | 10% of the reference price value (except `tier_price` where X% represents the discount) | `msrp`, `special_price`, `tier_price` |
+| +10%  | Increase the current value by 10%  | All Prices |
+| -10%  | Decrease the current value by 10%  | All Prices |
+| x | Delete the value from the system  | All Prices (except `price`) |
 
 
 ### Price Rounding Options
@@ -72,6 +77,16 @@ With this in mind, this import extension provides three types of options for pri
 | No Rounding      | No action with the price                                                                                                                                                          |
 | Round Normally   | Uses PHP's round() function.Examples:  9.43 -> 9.00  9.63 -> 10.00                                                                                                                |
 | Round to Nearest | Used for psychological or strategic pricing(like *.99, *.50, etc.). Examples:  9.43 -> 9.00 + (If Rounding Value = 0.99) = 9.99  9.43 -> 9.00 + (If Rounding Value = 0.50) = 9.50 |
+
+### Import Pricing via CLI
+If you want to import prices with large CSV files, importing via SSH's command-line interface(CLI) is the best bet. This will not overload your web server and there won't be a *504 Gateway Time-out* issue.  
+Magento 2 Pricing Import via SSH CLI/Console Command
+![Import Pricing via CLI Command](https://www.magepsycho.com/media/catalog/product/m/i/mip-pricing-import-via-console-command.png)
+
+Also, the price importing can be scheduled via cron jobs. For example:
+```
+1 0 * * * /usr/bin/php /path/to/magento2/bin/magento mip:pricing:import --reindex /path/to/import/file.csv
+```
 
 ### Export Pricing
 Updating Regular Price & Special Price might be comparatively easier. But updating tier price can be time-consuming because of the multiple level price it owns.  
