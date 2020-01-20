@@ -115,9 +115,17 @@ php bin/magento cache:flush
 For the sample files, please visit [Magento 2 Regular, Special & Tier Price Importer Sample Files](https://github.com/MagePsycho/magento2-regular-special-tier-price-importer-sample-files)
 
 ## Live Demo:
-*Coming Soon*
+
+* [Backend Demo](http://m2default.mage-expo.com/admin_m2demo/?module=mippricing)
 
 ## Changelog
+**Version 1.0.1 (2020-01-15)**  
+* Fixed minor ACL issue
+* Fixed di compilation issue in Magento 2.2.3
+* Fixed css for uploader box in Magento 2.2.4
+* Fixed CSV popup preview issue
+* Updated sample files
+
 **Version 1.0.0 (2019-12-25)**
     
 * Initial Release.
