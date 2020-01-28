@@ -119,6 +119,12 @@ For the sample files, please visit [Magento 2 Regular, Special & Tier Price Impo
 * [Backend Demo](http://m2default.mage-expo.com/admin_m2demo/?module=mippricing)
 
 ## Changelog
+**Version 1.0.2 (2020-01-24)**  
+* Fixed js minify issue during static content deploy
+* Fixed 0 price issue in case of empty values
+* Fixed price rounding issue
+* Refactored code
+
 **Version 1.0.1 (2020-01-15)**  
 * Fixed minor ACL issue
 * Fixed di compilation issue in Magento 2.2.3
